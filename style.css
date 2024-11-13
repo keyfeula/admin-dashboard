@@ -3,3 +3,23 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --light-blue: #1992D4;
+}
+
+.main-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.main-container div {
+    border: 1px solid black;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    background: var(--light-blue);
+}

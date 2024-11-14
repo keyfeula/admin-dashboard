@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto, system-ui;
     margin: 0;
     padding: 0;
 }
@@ -16,10 +17,34 @@
 }
 
 .main-container div {
-    border: 1px solid black;
+    
 }
 
 .sidebar {
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    padding: 1rem;
     grid-row: 1 / -1;
     background: var(--light-blue);
+    gap: 2rem;
+    color: #ffffff;
+}
+
+.sidebar-nav ul{
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.sidebar-nav a {
+    color: #ffffff;
+}
+
+.siderbar .branding {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
 }

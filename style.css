@@ -7,7 +7,7 @@
 
 :root {
     --light-blue: #1992D4;
-    --gray: #d2d2d2;
+    --gray: #dcdcdc;
 }
 
 .main-container {
@@ -15,10 +15,6 @@
     height: 100vh;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
-}
-
-.main-container div {
-    
 }
 
 .sidebar {
@@ -54,19 +50,27 @@ a {
 .header {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    box-shadow: 0 5px 5px #cccccc44;
+    box-shadow: 0 5px 5px #b8b8b8fb;
+    z-index: 1;
 }
 
 .header .searchbar-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 1rem;
     gap: 1rem;
 }
 
 .searchbar-section .left-section {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    padding: 1.5rem;
+}
+
+.searchbar-section .right-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
 }
 
 .searchbar-section input#searchbar {
@@ -75,6 +79,33 @@ a {
     background: var(--gray);
 }
 
-.header div {
-    border: 1px solid black;
+.header .buttons-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.buttons-section .user-info {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.buttons-section .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.buttons button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    background: var(--light-blue);
+    color: #ffffff;
+}
+
+.main-content {
+    background: var(--gray);
 }

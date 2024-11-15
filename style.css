@@ -107,5 +107,16 @@ a {
 }
 
 .main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
     background: var(--gray);
+}
+
+.main-content div {
+    border: 1px solid black;
+}
+
+.main-content .projects {
+    grid-row: 1 / -1;
 }

@@ -77,18 +77,12 @@ a {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 0 3rem 0 1rem;
+    box-shadow: 0 5px 5px -5px #535353;
+    z-index: 1;
 }
 
 .header .searchbar {
     grid-area: 1 / 1 / 2 / 3;
-}
-
-.header .user-info {
-    background: yellow;
-}
-
-.header .buttons {
-    background: rebeccapurple;
 }
 
 .searchbar {
@@ -119,6 +113,7 @@ a {
     align-items: center;
     justify-content: flex-end;
     gap: 1.5rem;
+    font-weight: 700;
 }
 
 .searchbar .profile-pic {
@@ -126,4 +121,50 @@ a {
     background: gold;
     width: 2rem;
     height: 2rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info .user-text {
+    font-weight: 700;
+}
+
+.user-text p:first-child {
+    font-size: 0.75rem;
+}
+
+.user-info .profile-pic {
+    border-radius: 100%;
+    background: gold;
+    width: 3rem;
+    height: 3rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.buttons button {
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: var(--light-blue);
+    color: #ffffff;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+}
+
+.main-content {
+    background: var(--light-grey);
 }

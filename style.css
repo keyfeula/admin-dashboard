@@ -8,6 +8,7 @@
 :root {
     --light-blue: #1992d4;
     --light-grey: #e2e8f0;
+    --gold: #f0b429;
 }
 
 body {
@@ -98,7 +99,7 @@ a {
 
 .searchbar input {
     width: 80%;
-    height: 40%;
+    height: 50%;
     border-radius: 0.75rem;
     background: var(--light-grey);
     border: none;
@@ -153,6 +154,7 @@ a {
 
 .buttons button {
     border-radius: 2rem;
+    width: 5rem;
     padding: 0.5rem 1rem;
     border: none;
     background: var(--light-blue);
@@ -162,9 +164,62 @@ a {
 .buttons a {
     text-decoration: none;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
 }
 
-.main-content {
+.content-container {
     background: var(--light-grey);
+    padding: 1rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    height: 100%;
+}
+
+.content h4 {
+    margin-bottom: 0.5rem;
+}
+
+.content .projects {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.projects .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.cards-container .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: #ffffff;
+    border-radius: 0.4rem;
+    border-left: 0.4rem solid var(--gold);
+    padding: 1rem;
+}
+
+.card .buttons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.content .right-content {
+    background: purple;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.right-content .announcements {
+    background: crimson;
+}
+
+.right-content .trending {
+    background: lime;
 }

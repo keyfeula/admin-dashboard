@@ -28,7 +28,7 @@ a {
     height: 100%;
     display: grid;
     grid-template-columns: minmax(10rem, 1fr) 6fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
@@ -192,6 +192,8 @@ a {
 
 .content .projects {
     grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects .cards-container {
@@ -199,6 +201,7 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
+    flex-grow: 1;
 }
 
 .cards-container .card {
@@ -257,6 +260,9 @@ a {
 .announcements .section {
     border-bottom: 1px solid var(--light-grey);
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section p:first-child {
